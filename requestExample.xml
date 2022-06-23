@@ -1,0 +1,98 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.efactura.isaltda.py/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ws:procesarLoteRequest>
+            <ws:procesarDocumento>
+                <ws:rDE>
+                    <ws:DE>
+                        <ws:gOpeDE><!--Tipo Emision. 1 Normal2 Contingencia -->
+                            <ws:iTipEmi>1</ws:iTipEmi>
+                        </ws:gOpeDE>
+                        <ws:gTimb><!--Tipo DE 1 Factura Electronica2 Factura electrónica de exportación 3 Factura electrónica de importación 4 Autofactura electrónica 5 Nota de crédito electrónica 6 Nota de débito electrónica 7 Nota de remisión electrónica 8 Comprobante de retención electrónico -->
+                            <ws:iTiDE>1</ws:iTiDE><!--Timbrado -->
+                            <ws:dNumTim>0000000</ws:dNumTim><!--Establecimiento. Se habilita en MFE -Empresa -->
+                            <ws:dEst>000</ws:dEst><!--Punto de expedicion. Se habilita en MFE -Timbrado -->
+                            <ws:dPunExp>999</ws:dPunExp><!--Numero de Factura -->
+                            <ws:dNumDoc>000-999-16</ws:dNumDoc>
+                        </ws:gTimb>
+                        <ws:gDatGralOpe><!--Fecha emision DE -->
+                            <ws:dFeEmiDE>2022-01-15T00:00:00</ws:dFeEmiDE>
+                            <ws:gOpeCom><!--Obligatorio si iTiDE = 1, 2, 3 y 4Tipo de transacción para el emisor1= Venta de mercadería2= Prestación de servicios3= Mixto (Venta de mercadería y servicios)4= Venta de activo fijo5= Venta de divisas6= Compra de divisas7= Promociones o entrega de muestras8= Donaciones9= Anticipos10= Compra de productos11= Compra de servicios12= Venta de crédito fiscal -->
+                                <ws:iTipTra>1</ws:iTipTra><!--Tipo Impuesto Consumo1 IVA, 2 ISC -->
+                                <ws:iTImp>1</ws:iTImp><!--Moneda de operacion -->
+                                <ws:cMoneOpe>PYG</ws:cMoneOpe>
+                            </ws:gOpeCom>
+                            <!--Grupo de Datos del EMISOR -->
+                            <ws:gEmis><!--RUC del emisor -->
+                                <ws:dRucEm>80000519</ws:dRucEm>
+                                <!--Digito verificador -->
+                                <ws:dDVEmi>8</ws:dDVEmi>
+                            </ws:gEmis><!--Grupo de Datos del RECEPTOR -->
+                            <ws:gDatRec><!--Naturaleza del receptor 1 Contribuyente, 2 No Contribuyente -->
+                                <ws:iNatRec>1</ws:iNatRec>
+                                <!--Tipo Operacion 1 B2B, 2 B2C, 3 B2G -->
+                                <ws:iTiOpe>2</ws:iTiOpe><!--Codigo de pais PRY -->
+                                <ws:cPaisRec>PRY</ws:cPaisRec>
+                                <!--Tipo Contribuyente receptor (si iNatRec == 1) 1 Persona Fisica, 2 Persona Juridica -->
+                                <ws:iTiContRec>1</ws:iTiContRec>
+                                <!--RUC receptor -->
+                                <ws:dRucRec>1999999</ws:dRucRec><!--Digito verificador -->
+                                <ws:dDVRec>3</ws:dDVRec><!--Nombre receptor -->
+                                <ws:dNomRec>Nombre del cliente</ws:dNomRec>
+                            </ws:gDatRec>
+                        </ws:gDatGralOpe><!--Datos especificos por tipo de DE -->
+                        <ws:gDtipDE><!--Campos que componen la FE -->
+                            <ws:gCamFE><!--Codigo indicador de presencia 1= Operación presencial 2= Operación por internet 3= Operación telemarketing 4= Venta a domicilio -->
+                                <ws:iIndPres>2</ws:iIndPres>
+                            </ws:gCamFE><!--Grupo de condicion de operacion -->
+                            <ws:gCamCond><!--Condicion de operacion 1 Contado,2 Credito -->
+                                <ws:iCondOpe>1</ws:iCondOpe><!--Grupo de Pago CONTADO. Zero or more repetitions-->
+                                <ws:gPaConEIni><!--Tipo de pago1 Efectivo2 Cheque3 Tarjeta de Crédito4 Tarjeta de Débito5 Transferencia6 Giros7 Billetera Electrónica8 Tarjetas Empresariales9 Vales -->
+                                    <ws:iTiPago>3</ws:iTiPago><!--Monto por tipo de pago -->
+                                    <ws:dMonTiPag>20000</ws:dMonTiPag>
+                                    <!--Moneda -->
+                                    <ws:cMoneTiPag>PYG</ws:cMoneTiPag>
+                                    <ws:gPagTarCD><!--Denominacion TC1 Visa2 Mastercard 3 American Express4 Maestro5 Panal6 Cabal9 Otro  -->
+                                        <ws:iDenTarj>2</ws:iDenTarj>
+                                        <ws:dRSProTar>?</ws:dRSProTar><!--Forma de procesamiento de pago. Obligatorio si iTiPago = 3. Opcional1 POS2 Pago Electrónico (Ejemplo: compras por Internet) -->
+                                        <ws:iForProPa>2</ws:iForProPa>
+                                    </ws:gPagTarCD>
+                                </ws:gPaConEIni>
+                            </ws:gCamCond>
+                            <!--Grupo de Items. Zero or more repetitions:-->
+                            <ws:gCamItem>
+                                <ws:dCodInt>604</ws:dCodInt>
+                                <!--Descripcion product o o servicio -->
+                                <ws:dDesProSer>Minicarga Gs. 2000</ws:dDesProSer><!--Cantidad item -->
+                                <ws:dCantProSer>1</ws:dCantProSer><!--Grupo de valor del item -->
+                                <ws:gValorItem>
+                                    <!--Precio unitario -->
+                                    <ws:dPUniProSer>5000</ws:dPUniProSer>
+                                    <!--Descuento sobre el item -->
+                                    <ws:dDescItem>0</ws:dDescItem>
+                                </ws:gValorItem><!--IVA de la operacion por item -->
+                                <ws:gCamIVA>
+                                    <!--Forma afectacion IVA1 Gravado IVA2 Exonerado (Art. 83-Ley 125/91)3 Exento4 Gravado parcial (Grav-Exento) -->
+                                    <ws:iAfecIVA>1</ws:iAfecIVA>
+                                    <!--% gravado del item -->
+                                    <ws:dPropIVA>100</ws:dPropIVA>
+                                    <!--% tasa IVA -->
+                                    <ws:dTasaIVA>10</ws:dTasaIVA>
+                                </ws:gCamIVA>
+                            </ws:gCamItem>
+                        </ws:gDtipDE>
+                    </ws:DE>
+                </ws:rDE>
+                <ws:parametrosProcesamiento>
+                    <ws:retornarKuDE>true</ws:retornarKuDE>
+                    <ws:retornarXmlFirmado>true</ws:retornarXmlFirmado>
+                    <ws:templateKuDE>1</ws:templateKuDE>
+                    <validarCalculos>false</validarCalculos>
+                    <cicloFacturacion>20210707</cicloFacturacion>
+                    <notificarActualizacionEstado>false</notificarActualizacionEstado>
+                    <urlNotificacion/>
+                </ws:parametrosProcesamiento>
+            </ws:procesarDocumento>
+        </ws:procesarLoteRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,184 @@
+[
+  {
+    "type": "INTEREST_APPLIED",
+    "loanAccount": {
+      "id": "MW6359",
+      "encodedKey": "8a44ba62811e64c801816484123d5c97",
+      "accountHolderKey": "8a44ba62811e64c801815ef118225ffd"
+    },
+    "invoiceGenerals": {
+      "amount": 1266,
+      "encodedKey": "8a44ba62811e64c8018164859f6a5cec",
+      "timestamp": "2022-06-14T19:21:52-04:00",
+      "condition": "contado"
+    },
+    "lineItems": [
+      {
+        "item": "interestActiveAccount",
+        "totalMambu": 1266,
+        "subtotalMambu": 1151,
+        "taxMambu": 115,
+        "taxRate": 10,
+        "totalSET": 1266,
+        "subtotalSET": 1151,
+        "taxSET": 115
+      }
+    ]
+  },
+  {
+    "type": "INTEREST_APPLIED",
+    "loanAccount": {
+      "id": "HN8561",
+      "encodedKey": "8a44ba62811e64c8018144f91ecc6e1e",
+      "accountHolderKey": "8a44ba62811e64c801815ef118225ffd"
+    },
+    "invoiceGenerals": {
+      "amount": 1301,
+      "encodedKey": "8a44be298164d1290181658b5dab029f",
+      "timestamp": "2022-06-15T00:00:00-04:00",
+      "condition": "credito"
+    },
+    "lineItems": [
+      {
+        "item": "interestActiveAccount",
+        "totalMambu": 1301,
+        "subtotalMambu": 1183,
+        "taxMambu": 118,
+        "taxRate": 10,
+        "totalSET": 1301,
+        "subtotalSET": 1183,
+        "taxSET": 118
+      }
+    ]
+  },
+  {
+    "type": "INTEREST_APPLIED",
+    "loanAccount": {
+      "id": "TL2800",
+      "encodedKey": "8a44da0a811e5d4f01814525a1fd0aa6",
+      "accountHolderKey": "8a44ba62811e64c801815ef118225ffd"
+    },
+    "invoiceGenerals": {
+      "amount": 2277,
+      "encodedKey": "8a44be298164d1290181658b5dab02a0",
+      "timestamp": "2022-06-15T00:00:00-04:00",
+      "condition": "credito"
+    },
+    "lineItems": [
+      {
+        "item": "interestActiveAccount",
+        "totalMambu": 2277,
+        "subtotalMambu": 2070,
+        "taxMambu": 207,
+        "taxRate": 10,
+        "totalSET": 2277,
+        "subtotalSET": 2070,
+        "taxSET": 207
+      }
+    ]
+  },
+  {
+    "type": "FEE_APPLIED",
+    "loanAccount": {
+      "id": "NG2160",
+      "encodedKey": "8a44ba62811e64c801815ef118225ffd",
+      "accountHolderKey": "8a44ba62811e64c801815ef118225ffd"
+    },
+    "invoiceGenerals": {
+      "amount": 24750,
+      "encodedKey": "8a44c6bf815b0f920181630de59f1d10",
+      "timestamp": "2022-06-14T12:31:03-04:00",
+      "condition": "credito"
+    },
+    "lineItems": [
+      {
+        "item": "adminFee",
+        "totalMambu": 24750,
+        "subtotalMambu": 22500,
+        "taxMambu": 2250,
+        "taxRate": 10,
+        "totalSET": 24750,
+        "subtotalSET": 22500,
+        "taxSET": 2250
+      }
+    ]
+  },
+  {
+    "type": "INTEREST_APPLIED",
+    "loanAccount": {
+      "id": "NO9730",
+      "encodedKey": "8a44c6bf815b0f920181634a847b21f4",
+      "accountHolderKey": "8a44ba62811e64c801815ef118225ffd"
+    },
+    "invoiceGenerals": {
+      "amount": 3909,
+      "encodedKey": "8a44c6bf815b0f920181634b63b2222a",
+      "timestamp": "2022-06-14T13:41:07-04:00",
+      "condition": "contado"
+    },
+    "lineItems": [
+      {
+        "item": "interestActiveAccount",
+        "totalMambu": 3909,
+        "subtotalMambu": 3554,
+        "taxMambu": 355,
+        "taxRate": 10,
+        "totalSET": 3909,
+        "subtotalSET": 3554,
+        "taxSET": 355
+      }
+    ]
+  },
+  {
+    "type": "PENALTY_APPLIED",
+    "loanAccount": {
+      "id": "XW3250",
+      "encodedKey": "8a44c6bf815b0f920181635288a822c7",
+      "accountHolderKey": "8a44ba62811e64c801815ef118225ffd"
+    },
+    "invoiceGenerals": {
+      "amount": 503,
+      "encodedKey": "8a44c6bf815b0f92018163534dc822f0",
+      "timestamp": "2022-06-14T13:46:53-04:00",
+      "condition": "contado"
+    },
+    "lineItems": [
+      {
+        "item": "penalty",
+        "totalMambu": 503,
+        "subtotalMambu": 457,
+        "taxMambu": 46,
+        "taxRate": 10,
+        "totalSET": 503,
+        "subtotalSET": 457,
+        "taxSET": 46
+      }
+    ]
+  },
+  {
+    "type": "FEE_APPLIED",
+    "loanAccount": {
+      "id": "EP0792",
+      "encodedKey": "8a44ba62811e64c80181630de11d3515",
+      "accountHolderKey": "8a44ba62811e64c801815ef118225ffd"
+    },
+    "invoiceGenerals": {
+      "amount": 57750,
+      "encodedKey": "8a44c6bf815b0f92018163705edf24a9",
+      "timestamp": "2022-06-14T14:18:37-04:00",
+      "condition": "credito"
+    },
+    "lineItems": [
+      {
+        "item": "adminFee",
+        "totalMambu": 57750,
+        "subtotalMambu": 52500,
+        "taxMambu": 5250,
+        "taxRate": 10,
+        "totalSET": 57750,
+        "subtotalSET": 52500,
+        "taxSET": 5250
+      }
+    ]
+  }
+]
